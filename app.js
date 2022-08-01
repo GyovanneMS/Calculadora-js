@@ -1,7 +1,7 @@
 console.log('Calculadora simples');
 
-const { type } = require('os');
-const { exit } = require('process');
+//import do arquivo de função para realizar calculos
+const {calcular} = require('./Modulos/calculadora.js');
 var readLine = require('readline');
 
 var entradaDados = readLine.createInterface({
@@ -27,7 +27,7 @@ entradaDados.question('Digite o número 1: ', function(valor1){
             if(resultado = calcular(numero1, numero2, operacao))
                 console.log('O resultado é ' + resultado);
 
-            exit();
+            process.exit(0);
         });
     });
 });
