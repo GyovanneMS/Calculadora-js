@@ -31,4 +31,3 @@ entradaDados.question('Digite o número 1: ', function(valor1){
         });
     });
 });
-

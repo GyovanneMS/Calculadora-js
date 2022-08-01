@@ -62,3 +62,7 @@ function calcular (valor1, valor2, opcaoCalculo) {
     }
     
 }
+//AS funções que serão usadas nos outros projetos, serão incluidas no module.exports, as funções que não serão adcionadas no module.exports, ficarão localmente neste arquivo 
+module.exports = {
+    calcular
+}
