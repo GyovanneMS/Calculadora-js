@@ -3,7 +3,7 @@
    Autor: Gyovanne Martins
    Data: 01/08/2022
    Nível do autor: Estudante
-   Versão: 1.0.0
+   Versão: 1.1.0
         * Arrumar bug = x.x.+1
         ** Adcionar elementos nas functions existentes = x.+1.x
         *** Adicionar function = +1.x.x
@@ -81,13 +81,13 @@ const calcular = function calcular (valor1, valor2, opcaoCalculo) {
     //!== dependendo de como for formado o significado pode mudar, mas tipagem e conteúdo diferente
     
     if(operacao == 'SOMAR' || operacao == '+'){
-        resultado = numero1 + numero2;
+        resultado = somar(numero1, numero2);
     }
     else if(operacao == 'SUBTRAIR' || operacao == '-'){
-        resultado = numero1 - numero2;
+        resultado = subtrair(numero1, numero2);
     }
     else if(operacao == 'MULTIPLICAR' || operacao == '*'){
-        resultado = numero1 * numero2;
+        resultado = multiplicar(numero1, numero2);
     }
     else if(operacao == 'DIVIDIR' || operacao == '/'){
         if (numero2 == 0){
@@ -95,7 +95,7 @@ const calcular = function calcular (valor1, valor2, opcaoCalculo) {
             erro = true;
             //exit();
         }
-        else{resultado = numero1 / numero2;};
+        else{resultado = dividir(numero1, numero2);};
     }
     else if(operacao == 'FECHAR' || operacao == 'X'){
         console.log('Obrigado por usar o programa.');
@@ -112,11 +112,16 @@ const calcular = function calcular (valor1, valor2, opcaoCalculo) {
         return false;
     }
     else{
-        return resultado.toString();
+        return resultado.toFixed(2);
     }
     
 }
 
+//Modelo de função Arrow Function
+const somar = (valor1, valor2) => parseFloat(valor1) + parseFloat(valor2);
+const subtrair = (valor1, valor2) => parseFloat(valor1) - parseFloat(valor2);
+const multiplicar = (valor1, valor2) => parseFloat(valor1) * parseFloat(valor2);
+const dividir = (valor1, valor2) => parseFloat(valor1) / parseFloat(valor2);
 
 //AS funções que serão usadas nos outros projetos, serão incluidas no module.exports, as funções que não serão adcionadas no module.exports, ficarão localmente neste arquivo 
 module.exports = {
