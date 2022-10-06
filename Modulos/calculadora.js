@@ -3,7 +3,7 @@
    Autor: Gyovanne Martins
    Data: 01/08/2022
    Nível do autor: Estudante
-   Versão: 1.1.0
+   Versão: 1.3.0
         * Arrumar bug = x.x.+1
         ** Adcionar elementos nas functions existentes = x.+1.x
         *** Adicionar function = +1.x.x
